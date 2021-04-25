@@ -1,0 +1,29 @@
+{
+    "presets": [
+        [
+            "@babel/preset-env",
+            {
+                // import被编译成了require，如果想要编译出来的模块引入规范还是import，则可以在preset-env的配置项中添加"modules": false即可
+                "modules": false,
+                "targets": {
+                    // 大于相关浏览器版本，无需使用preset-env
+                    "edge": "17",
+                    "firefox": "60",
+                    "chrome": "67",
+                    "safari": "11.1"
+                },
+                // 根据代码逻辑中用到的ES6+语法进行方法的导入，而不是全部导入
+                "useBuiltIns": "usage",
+                "corejs": "3"
+            }
+        ],
+        "@babel/preset-react"
+    ],
+    "plugins": [[
+        "import", {
+            "libraryName": "antd", 
+            "libraryDirectory": "es",
+            "style": "css"
+        }
+    ]]
+}
