@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Input, DatePicker } from 'antd'
-import Styles from './app.less'
+// import { Input, DatePicker } from 'antd'
+// import Styles from './app.less'
 
 function App() {
   let list = [
@@ -11,10 +11,9 @@ function App() {
   let [todos, setTodos] = useState(list)
   let [count, setCount] = useState(0)
   return (
-    <div className={Styles.AppWrap}>
+    <div>
       <div>
         <h1>Welcome to Webpack!</h1>
-        <Input value={count} />
 
         <h1>Count22: {count}</h1>
         <button onClick={()=>{setCount(count=>count+1)}}>Add</button>

@@ -4,7 +4,7 @@
             "@babel/preset-env",
             {
                 // import被编译成了require，如果想要编译出来的模块引入规范还是import，则可以在preset-env的配置项中添加"modules": false即可
-                "modules": false,
+                "modules": "auto",
                 "targets": {
                     // 大于相关浏览器版本，无需使用preset-env
                     "edge": "17",
